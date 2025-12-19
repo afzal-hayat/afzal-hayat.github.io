@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afzal Hayat | Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap');
+
+    :root {
+      --emerald-dark: #064e3b;
+      --emerald-main: #10b981;
+      --emerald-light: #6ee7b7;
+      --emerald-glow: #34d399;
+      --bg-dark: #021c16;
+      --silver-1: #064e3b;   /* deep emerald */
+      --silver-2: #022c22;   /* darker emerald */
+      --silver-3: #021c16;   /* near-black emerald */
+      --text-light: #ecfdf5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #022c22, var(--bg-dark));
+      color: var(--text-light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--silver-1), var(--silver-2), var(--silver-3));
+      padding: 90px 20px 120px;
+      text-align: center;
+      color: var(--text-dark);
+      position: relative;
+      box-shadow: inset 0 -10px 40px rgba(0,0,0,0.25);
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 0 40px rgba(16,185,129,0.8);
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #e5e7eb,
+    #9ca3af,
+    #ffffff
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.35);
+}
+    
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 760px;
+      margin: auto;
+      color: #111827;
+      opacity: 0.9;
+    }
+
+    .typing {
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin-top: 10px;
+      min-height: 28px;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(12px);
+      background: rgba(6, 78, 59, 0.75);
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 16px;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--emerald-light);
+      font-weight: 600;
+    }
+
+    section {
+      padding: 90px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 40px;
+      color: var(--emerald-light);
+      text-shadow: 0 0 15px rgba(52,211,153,0.6);
+    }
+
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 22px;
+      justify-items: center;
+    }
+
+    .skill-box {
+      padding: 18px 28px;
+      border-radius: 14px;
+      background: rgba(6, 78, 59, 0.6);
+      border: 1px solid rgba(16,185,129,0.6);
+      box-shadow: 0 0 18px rgba(16,185,129,0.35);
+      text-align: center;
+      min-width: 140px;
+    }
+
+    .projects {
+      display: flex;
+      justify-content: center;
+    }
+
+    .project-card {
+      max-width: 650px;
+      padding: 30px;
+      border-radius: 18px;
+      background: rgba(6, 78, 59, 0.55);
+      border: 1px solid rgba(16,185,129,0.6);
+      box-shadow: 0 0 22px rgba(16,185,129,0.45);
+    }
+
+    .project-card h3 {
+      margin-bottom: 8px;
+      color: var(--emerald-light);
+    }
+
+    .project-card span {
+      display: block;
+      margin-bottom: 12px;
+      opacity: 0.9;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    footer {
+      background: linear-gradient(135deg, var(--emerald-main), var(--emerald-dark));
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="profile.jpeg" alt="Afzal Hayat" class="profile-pic">
+  <h1>Afzal Hayat</h1>
+  <div class="typing" id="typing"></div>
+</header>
+
+    <nav>
+    
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p class="about">
+      I am a B.Tech Computer Science Engineering student at Galgotias University, driven by a strong curiosity for technology and a passion for building impactful digital experiences. With a solid foundation in web development and backend concepts, I enjoy transforming ideas into functional, user-focused solutions. I am known for my fast learning ability, analytical thinking, and enthusiasm for leading teams toward shared goals.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill-box">HTML5</div>
+      <div class="skill-box">CSS3</div>
+      <div class="skill-box">JavaScript</div>
+      <div class="skill-box">Java</div>
+      <div class="skill-box">JSP & Servlets</div>
+      <div class="skill-box">JDBC & SQL</div>
+      <div class="skill-box">Leadership</div>
+      <div class="skill-box">Communication</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Online Personal Finance Management Platform</h3>
+        <span>Role: Team Leader</span>
+        <p>
+          As the Team Leader, I guided the project from initial ideation to final implementation. I was responsible for task allocation, team coordination, and maintaining development timelines, while also contributing to system design and feature integration to ensure a robust and scalable solution.
+        </p>
+        <p>
+          GitHub: <a href="https://github.com/afzal-hayat/online-personal-finance-management-platform" target="_blank" style="color:inherit; text-decoration:none;">https://github.com/afzal-hayat/online-personal-finance-management-platform</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>Open to internships, collaborations, and learning opportunities.</p>
+      <p><strong>Email:</strong> afzalhayat2005@gmail.com</p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/afzal-hayat-235258319" target="_blank" style="color:#6ee7b7">linkedin.com/in/afzal-hayat</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Afzal Hayat | Crafted with passion</p>
+    </footer>
+
+  <script>
+    const roles = [
+      "Aspiring Web Developer",
+      "Java & Backend Enthusiast",
+      "Team Leader",
+      "Fast Learner"
+    ];
+    let index = 0;
+    let charIndex = 0;
+    const typingElement = document.getElementById("typing");
+
+    function typeEffect() {
+      if (charIndex < roles[index].length) {
+        typingElement.textContent += roles[index].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeEffect, 80);
+      } else {
+        setTimeout(eraseEffect, 1500);
+      }
+    }
+
+    function eraseEffect() {
+      if (charIndex > 0) {
+        typingElement.textContent = roles[index].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(eraseEffect, 50);
+      } else {
+        index = (index + 1) % roles.length;
+        setTimeout(typeEffect, 300);
+      }
+    }
+
+    typeEffect();
+  </script>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
